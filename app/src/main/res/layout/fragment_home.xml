@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home.fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome User,"
+        android:textSize="25"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register for vaccine"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Report symptoms"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/helpline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call helpline"
+        app:layout_constraintTop_toBottomOf="@id/guideTop"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:flow_maxElementsWrap="2"
+        app:flow_wrapMode="chain"
+        app:flow_verticalStyle="spread"
+        app:flow_verticalBias="0"
+        app:flow_horizontalBias="0"
+        app:flow_horizontalStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        app:layout_constraintEnd_toEndOf="@id/guideRight"
+        app:layout_constraintStart_toStartOf="@id/guideLeft"
+        app:constraint_referenced_ids="register,report,helpline"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

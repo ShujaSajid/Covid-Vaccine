@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".registration.LoginActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/uName"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:hint="@string/aadhar_number"
+       app:layout_constraintTop_toBottomOf="@id/guideTop"
+       app:layout_constraintStart_toStartOf="@id/guideLeft"
+       app:layout_constraintEnd_toEndOf="@id/guideRight">
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/uNameEt"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+   </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@id/uName"
+        app:layout_constraintTop_toBottomOf="@id/uName"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New User? Login"
+        android:textAllCaps="false"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@id/Login"
+        app:layout_constraintTop_toBottomOf="@id/Login"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
